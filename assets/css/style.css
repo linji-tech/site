@@ -156,14 +156,6 @@ svg {
   letter-spacing: 0.14em;
 }
 
-.brand-tag {
-  font-family: var(--mono);
-  font-size: 10px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
-
 .nav {
   display: flex;
   align-items: center;
@@ -849,98 +841,25 @@ a.card:hover,
   }
 }
 
-.book {
-  position: relative;
-  width: min(270px, 100%);
-  aspect-ratio: 2 / 2.95;
-  padding: 30px 26px 26px;
-  border-radius: 2px 5px 5px 2px;
-  background: linear-gradient(150deg, #2a312f 0%, #1f2524 55%, #262d2b 100%);
-  color: #f3efe6;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  box-shadow:
-    0 26px 50px -30px rgba(27, 30, 33, 0.65),
-    0 2px 0 rgba(255, 255, 255, 0.06) inset;
-  transform: rotate(-1.6deg);
-  transition:
-    transform 0.4s cubic-bezier(0.2, 0.7, 0.3, 1),
-    box-shadow 0.4s ease;
-  overflow: hidden;
-}
-
-.book:hover {
-  transform: rotate(0deg) translateY(-4px);
-  box-shadow: 0 34px 60px -30px rgba(27, 30, 33, 0.7);
-}
-
-.book::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 11px;
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0));
-}
-
-.book::after {
-  content: "";
-  position: absolute;
-  right: -40%;
-  top: -30%;
-  width: 130%;
-  height: 70%;
-  background: radial-gradient(circle at 30% 30%, rgba(164, 65, 43, 0.4), transparent 62%);
-  pointer-events: none;
-}
-
-.book-eyebrow {
-  font-family: var(--mono);
-  font-size: 9px;
-  letter-spacing: 0.28em;
-  text-transform: uppercase;
-  color: rgba(243, 239, 230, 0.55);
-  position: relative;
-}
-
-.book-title {
-  font-family: var(--serif);
-  font-size: 30px;
-  line-height: 1.4;
-  letter-spacing: 0.1em;
+.book-figure {
   margin: 0;
-  position: relative;
+  width: min(330px, 100%);
+  justify-self: center;
+  /* 供 multiply 混合的底色，等于页面纸色 */
+  background: var(--paper);
 }
 
-.book-title small {
+.book-figure img {
   display: block;
-  font-family: var(--sans);
-  font-size: 11px;
-  letter-spacing: 0.06em;
-  line-height: 1.9;
-  color: rgba(243, 239, 230, 0.72);
-  margin-top: 14px;
-  font-weight: 400;
+  width: 100%;
+  height: auto;
+  /* 封面图自带纯白背景，用正片叠底融进纸色页面 */
+  mix-blend-mode: multiply;
+  transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.3, 1);
 }
 
-.book-foot {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  font-size: 10px;
-  letter-spacing: 0.14em;
-  color: rgba(243, 239, 230, 0.6);
-  border-top: 1px solid rgba(243, 239, 230, 0.18);
-  padding-top: 12px;
-}
-
-.book-foot strong {
-  color: rgba(243, 239, 230, 0.9);
-  font-weight: 400;
-  letter-spacing: 0.2em;
+.book-figure:hover img {
+  transform: translateY(-5px);
 }
 
 /* 信息表 */
