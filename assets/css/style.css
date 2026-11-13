@@ -446,16 +446,6 @@ p:last-child {
   color: var(--accent);
 }
 
-.hero-sub {
-  font-family: var(--serif);
-  font-size: clamp(17px, 1.9vw, 22px);
-  letter-spacing: 0.08em;
-  color: var(--ink-2);
-  margin: 0 0 22px;
-  padding-left: 16px;
-  border-left: 2px solid var(--accent);
-}
-
 .hero-mark {
   display: flex;
   justify-content: flex-end;
