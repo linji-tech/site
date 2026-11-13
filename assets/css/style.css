@@ -916,6 +916,31 @@ a.card:hover,
   background: linear-gradient(90deg, var(--accent-soft), transparent 70%);
 }
 
+/* 整行可点：外层用 display:contents 让 a 的子孙直接参与 li 的网格，
+   不改变行距与对齐，只在 hover 时改变标题颜色 */
+.posts .post-row {
+  display: contents;
+  color: inherit;
+}
+
+.posts a.post-row {
+  cursor: pointer;
+}
+
+.posts a.post-row .ttl {
+  transition: color 0.25s ease;
+}
+
+.posts a.post-row:hover .ttl {
+  color: var(--accent);
+}
+
+.posts a.post-row:focus-visible .ttl {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
 .posts .idx {
   font-family: var(--mono);
   font-size: 12px;
