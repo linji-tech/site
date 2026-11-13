@@ -1126,6 +1126,12 @@ a.card:hover,
   overflow: hidden;
 }
 
+/* 只剩一格时收窄，避免拉成一条空荡荡的横带 */
+.contact-grid-single {
+  width: min(300px, 100%);
+  grid-template-columns: minmax(0, 1fr);
+}
+
 .contact-cell {
   background: var(--paper-2);
   padding: 22px 24px;
