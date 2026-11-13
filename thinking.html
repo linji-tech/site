@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>九种数据分析思维｜林骥 · 数据化分析</title>
+<meta name="description" content="DAT = GAP + ORS + BDI。林骥总结的 9 种数据分析思维：目标、对比、细分（理解现状）；溯源、相关、假设（分析原因）；逆向、演绎、归纳（预测未来）。">
+<link rel="canonical" href="https://linji.tech/thinking.html">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="article">
+<meta property="og:title" content="九种数据分析思维 · DAT = GAP + ORS + BDI">
+<meta property="og:description" content="看见差距、洞见可能、预见趋势——一套可以反复使用的思维框架。">
+<meta property="og:url" content="https://linji.tech/thinking.html">
+<meta name="theme-color" content="#f7f5ef">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">跳到正文</a>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-name">林骥</span>
+      <span class="brand-tag">Data Analytics</span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="打开导航">
+      <span></span><span></span>
+    </button>
+    <nav class="nav" id="site-nav">
+      <a href="index.html">首页</a>
+      <a href="about.html">关于</a>
+      <a href="thinking.html" aria-current="page">思维体系</a>
+      <a href="book.html">著作</a>
+      <a href="writing.html">写作</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero" style="padding-bottom:clamp(36px,5vw,56px)">
+    <div class="wrap">
+      <p class="eyebrow reveal">思维体系 / Framework</p>
+      <h1 class="reveal" style="font-size:clamp(38px,6vw,68px);line-height:1.15;margin-bottom:24px">
+        九种数据分析思维
+      </h1>
+      <p class="lead reveal" data-delay="80">
+        数据是原始的、未经加工的事实。从数据中获得有用的信息，从信息中获得有效的知识，
+        从知识中获得有益的智慧——这是一个价值从小到大、难度由易到难的过程。
+      </p>
+      <p class="lead reveal" data-delay="140" style="margin-top:18px">
+        这九种思维，是我在十几年的实践里一点点攒起来的。它们不依赖某个工具，
+        换一份工作、换一个行业，依然用得上。
+      </p>
+    </div>
+  </section>
+
+  <!-- 公式 -->
+  <section class="section">
+    <div class="wrap">
+      <div class="formula reveal">
+        <span class="g-term">DAT<em>数据化分析</em></span>
+        <span class="op">=</span>
+        <span class="g-term">GAP<em>理解现状</em></span>
+        <span class="op">+</span>
+        <span class="g-term">ORS<em>分析原因</em></span>
+        <span class="op">+</span>
+        <span class="g-term">BDI<em>预测未来</em></span>
+      </div>
+
+      <div class="ladder reveal" data-delay="100" style="margin-top:clamp(40px,5vw,64px)">
+        <div class="ladder-step">
+          <div class="ladder-bar">数据</div>
+          <small>原始的、未经加工的事实</small>
+        </div>
+        <div class="ladder-step">
+          <div class="ladder-bar">信息</div>
+          <small>整理过、有上下文的数据</small>
+        </div>
+        <div class="ladder-step">
+          <div class="ladder-bar">知识</div>
+          <small>可以复用的规律与方法</small>
+        </div>
+        <div class="ladder-step">
+          <div class="ladder-bar">智慧</div>
+          <small>做出正确判断的能力</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GAP -->
+  <section class="section" id="gap">
+    <div class="wrap split">
+      <div class="sticky-col reveal">
+        <p class="eyebrow">01 / GAP</p>
+        <h2>理解现状</h2>
+        <p class="lead" style="font-size:15px;margin-top:16px;color:var(--muted)">
+          看见现状与目标之间的差距。没有目标，就没有差距；没有对比，就分不清好坏；
+          没有细分，就找不到问题在哪。
+        </p>
+        <p class="mono small" style="color:var(--accent);margin-top:18px;letter-spacing:.06em">
+          Goal · Antithetical · Partitional
+        </p>
+      </div>
+
+      <div class="stack reveal" data-delay="80">
+        <article class="card">
+          <div class="think-head">
+            <span class="num-tag">01</span>
+            <h3 class="card-title">目标思维</h3>
+            <span class="think-en">Goal-directed</span>
+          </div>
+          <p>先定目标，再谈差距。目标不清晰，数据再多也回答不了一个明确的问题。分析的第一步从来不是打开表格，而是问清楚：我们想解决什么。</p>
+        </article>
+        <article class="card">
+          <div class="think-head">
+            <span class="num-tag">02</span>
+            <h3 class="card-title">对比思维</h3>
+            <span class="think-en">Antithetical</span>
+          </div>
+          <p>纵向比时间，横向比同类。一个孤立的数字没有意义，只有放进参照系里，才知道它是好是坏、是快是慢。</p>
+        </article>
+        <article class="card">
+          <div class="think-head">
+            <span class="num-tag">03</span>
+            <h3 class="card-title">细分思维</h3>
+            <span class="think-en">Partitional</span>
+          </div>
+          <p>按时间、空间、过程、公式、模型把整体拆开。整体看不出的问题，细分之后往往一眼就现形——杜邦分析法与 MECE，本质上都是细分。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ORS -->
+  <section class="section" id="ors">
+    <div class="wrap split">
+      <div class="sticky-col reveal">
+        <p class="eyebrow">02 / ORS</p>
+        <h2>分析原因</h2>
+        <p class="lead" style="font-size:15px;margin-top:16px;color:var(--muted)">
+          洞见更多潜在的可能。知道「哪里不对」之后，还要回答「为什么不对」，
+          并且愿意去看那些一开始没想到的解释。
+        </p>
+        <p class="mono small" style="color:var(--accent);margin-top:18px;letter-spacing:.06em">
+          Original · Relevant · Supposed
+        </p>
+      </div>
+
+      <div class="stack reveal" data-delay="80">
+        <article class="card">
+          <div class="think-head">
+            <span class="num-tag">04</span>
+            <h3 class="card-title">溯源思维</h3>
+            <span class="think-en">Original</span>
+          </div>
+          <p>回到数据源头，追到最细的记录，看背后可能隐藏着什么逻辑关系。对数据的敏感和对业务的理解，就是这样一层层追出来的。</p>
+        </article>
+        <article class="card">
+          <div class="think-head">
+            <span class="num-tag">05</span>
+            <h3 class="card-title">相关思维</h3>
+            <span class="think-en">Relevant</span>
+          </div>
+          <p>在两个看似无关的事物之间建立联系。「啤酒与尿布」之所以经典，不是因为结论离奇，而是因为它提醒我们：线索常常藏在意外的地方。</p>
+        </article>
+        <article class="card">
+          <div class="think-head">
+            <span class="num-tag">06</span>
+            <h3 class="card-title">假设思维</h3>
+            <span class="think-en">Supposed</span>
+          </div>
+          <p>先提出一个可以被验证的假设，再用数据去证实或者推翻它。带着假设看数据，比漫无目的地翻表格效率高得多。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- BDI -->
+  <section class="section" id="bdi">
+    <div class="wrap split">
+      <div class="sticky-col reveal">
+        <p class="eyebrow">03 / BDI</p>
+        <h2>预测未来</h2>
+        <p class="lead" style="font-size:15px;margin-top:16px;color:var(--muted)">
+          预见指数变化的趋势。分析的终点不是一份报告，而是一个可以被执行的判断。
+        </p>
+        <p class="mono small" style="color:var(--accent);margin-top:18px;letter-spacing:.06em">
+          Backward · Deductive · Inductive
+        </p>
+      </div>
+
+      <div class="stack reveal" data-delay="80">
+        <article class="card">
+          <div class="think-head">
+            <span class="num-tag">07</span>
+            <h3 class="card-title">逆向思维</h3>
+            <span class="think-en">Backward</span>
+          </div>
+          <p>从想要的结果往回推：要达成它，前面必须发生什么？把终点想清楚，路径往往就浮出来了。</p>
+        </article>
+        <article class="card">
+          <div class="think-head">
+            <span class="num-tag">08</span>
+            <h3 class="card-title">演绎思维</h3>
+            <span class="think-en">Deductive</span>
+          </div>
+          <p>从一般规律推导具体结论。模型的价值就在这里：它让你在数据不足的时候，仍然有一个讲得通的起点。</p>
+        </article>
+        <article class="card">
+          <div class="think-head">
+            <span class="num-tag">09</span>
+            <h3 class="card-title">归纳思维</h3>
+            <span class="think-en">Inductive</span>
+          </div>
+          <p>从大量具体事实里归纳出一般规律。这九种思维本身，就是归纳的产物——先有一次次具体的分析，才有后来这套框架。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 怎么用 -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">用法 / Practice</p>
+        <h2>放在一起怎么用</h2>
+        <p>顺序不必死守，但大方向是从「看清」到「想透」再到「推远」。</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card reveal">
+          <span class="num-tag">STEP 01</span>
+          <h3 class="card-title">定义差距</h3>
+          <p>用目标思维问「要什么」，用对比思维问「差多少」，用细分思维问「差在哪」。</p>
+        </div>
+        <div class="card reveal" data-delay="80">
+          <span class="num-tag">STEP 02</span>
+          <h3 class="card-title">解释原因</h3>
+          <p>用溯源思维往下钻，用相关思维往外看，用假设思维把猜想变成可验证的命题。</p>
+        </div>
+        <div class="card reveal" data-delay="160">
+          <span class="num-tag">STEP 03</span>
+          <h3 class="card-title">推演对策</h3>
+          <p>用逆向思维定路径，用演绎思维推后果，用归纳思维把这次的结论变成下次的经验。</p>
+        </div>
+      </div>
+
+      <p style="margin-top:36px">
+        <a class="btn" href="book.html">在《数据化分析》里读完整版 <span class="arrow" aria-hidden="true">→</span></a>
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-note">
+      © <span id="year">2026</span> 林骥 · 数据化分析<br>
+      用数据化解难题，让分析更加有效
+    </div>
+    <nav class="footer-nav">
+      <a href="index.html">首页</a>
+      <a href="about.html">关于</a>
+      <a href="thinking.html">思维体系</a>
+      <a href="book.html">著作</a>
+      <a href="writing.html">写作</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
