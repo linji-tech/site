@@ -17,10 +17,12 @@
   --teal: #2d5d57;
   --gold: #b0894a;
 
-  --serif: "Songti SC", "Noto Serif SC", "Source Han Serif SC", "Source Han Serif CN",
-    "STSong", "SimSun", Georgia, "Times New Roman", serif;
-  --sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB",
-    "Microsoft YaHei", "Segoe UI", Roboto, system-ui, sans-serif;
+  --serif:
+    "Songti SC", "Noto Serif SC", "Source Han Serif SC", "Source Han Serif CN", "STSong", "SimSun",
+    Georgia, "Times New Roman", serif;
+  --sans:
+    -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+    "Segoe UI", Roboto, system-ui, sans-serif;
   --mono: "SF Mono", "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
 
   --wrap: 1120px;
@@ -57,7 +59,8 @@ body::before {
   inset: 0;
   z-index: 0;
   pointer-events: none;
-  background-image: linear-gradient(to right, rgba(27, 30, 33, 0.045) 1px, transparent 1px),
+  background-image:
+    linear-gradient(to right, rgba(27, 30, 33, 0.045) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(27, 30, 33, 0.045) 1px, transparent 1px);
   background-size: 44px 44px;
   opacity: 0.55;
@@ -119,7 +122,10 @@ svg {
   -webkit-backdrop-filter: saturate(180%) blur(14px);
   backdrop-filter: saturate(180%) blur(14px);
   border-bottom: 1px solid transparent;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
 }
 
 .site-header.is-scrolled {
@@ -219,7 +225,9 @@ svg {
   width: 16px;
   height: 1px;
   background: var(--ink);
-  transition: transform 0.25s ease, opacity 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
 }
 
 .nav-toggle[aria-expanded="true"] span:first-child {
@@ -363,7 +371,10 @@ p:last-child {
   border: 1px solid var(--ink);
   background: var(--ink);
   color: var(--paper);
-  transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease,
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    color 0.2s ease,
     border-color 0.2s ease;
 }
 
@@ -409,7 +420,9 @@ p:last-child {
   color: var(--accent);
   border-bottom: 1px solid rgba(164, 65, 43, 0.28);
   padding-bottom: 2px;
-  transition: border-color 0.2s ease, gap 0.2s ease;
+  transition:
+    border-color 0.2s ease,
+    gap 0.2s ease;
 }
 
 .text-link:hover {
@@ -638,7 +651,10 @@ p:last-child {
   border: 1px solid var(--line);
   border-radius: var(--radius);
   padding: clamp(22px, 2.6vw, 32px);
-  transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+  transition:
+    border-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 a.card:hover,
@@ -844,10 +860,13 @@ a.card:hover,
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  box-shadow: 0 26px 50px -30px rgba(27, 30, 33, 0.65),
+  box-shadow:
+    0 26px 50px -30px rgba(27, 30, 33, 0.65),
     0 2px 0 rgba(255, 255, 255, 0.06) inset;
   transform: rotate(-1.6deg);
-  transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.3, 1), box-shadow 0.4s ease;
+  transition:
+    transform 0.4s cubic-bezier(0.2, 0.7, 0.3, 1),
+    box-shadow 0.4s ease;
   overflow: hidden;
 }
 
@@ -968,7 +987,9 @@ a.card:hover,
   align-items: baseline;
   padding: 20px 0;
   border-bottom: 1px solid var(--line);
-  transition: padding-left 0.25s ease, background 0.25s ease;
+  transition:
+    padding-left 0.25s ease,
+    background 0.25s ease;
 }
 
 .posts li:hover {
@@ -1031,7 +1052,10 @@ a.card:hover,
   padding: clamp(22px, 2.6vw, 30px);
   display: flex;
   flex-direction: column;
-  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
 }
 
 .group:hover {
@@ -1244,7 +1268,8 @@ a.card:hover,
 .reveal {
   opacity: 0;
   transform: translateY(16px);
-  transition: opacity 0.8s cubic-bezier(0.2, 0.7, 0.3, 1),
+  transition:
+    opacity 0.8s cubic-bezier(0.2, 0.7, 0.3, 1),
     transform 0.8s cubic-bezier(0.2, 0.7, 0.3, 1);
   will-change: opacity, transform;
 }
