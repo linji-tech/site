@@ -1,5 +1,9 @@
 .DS_Store
 *.log
 node_modules/
+
+# 编辑器 / 工具本地状态（.vscode 下的项目配置需要保留）
+.vscode/workspaceStorage/
+.obsidian/
+.workbuddy/
 .idea/
-.vscode/
