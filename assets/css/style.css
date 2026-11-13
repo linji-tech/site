@@ -496,6 +496,11 @@ p:last-child {
   border-bottom: 1px solid var(--line);
 }
 
+/* 三格版：按实际条目数等分，避免末尾留出空格 */
+.stats.stats-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .stat {
   padding: 26px 22px 24px 0;
   border-right: 1px solid var(--line);
@@ -559,6 +564,19 @@ p:last-child {
 
   .stat:nth-last-child(-n + 2) {
     border-bottom: 0;
+  }
+
+  /* 三格版在窄屏仍是两列，第三格独占末行 */
+  .stats.stats-3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .stats-3 .stat:nth-child(2) {
+    border-bottom: 1px solid var(--line);
+  }
+
+  .stats-3 .stat:nth-child(3) {
+    border-right: 0;
   }
 }
 
