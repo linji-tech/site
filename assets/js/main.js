@@ -7,17 +7,30 @@
   var nav = document.querySelector(".nav");
 
   if (toggle && nav) {
+    var setNavOpen = function (open) {
+      nav.classList.toggle("is-open", open);
+      toggle.setAttribute("aria-expanded", String(open));
+      toggle.setAttribute("aria-label", open ? "关闭导航" : "打开导航");
+    };
+
     toggle.addEventListener("click", function () {
-      var open = nav.classList.toggle("is-open");
-      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+      setNavOpen(!nav.classList.contains("is-open"));
     });
 
     nav.addEventListener("click", function (e) {
       if (e.target.closest("a") && nav.classList.contains("is-open")) {
-        nav.classList.remove("is-open");
-        toggle.setAttribute("aria-expanded", "false");
+        setNavOpen(false);
       }
     });
+
+    toggle.parentElement.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && nav.classList.contains("is-open")) {
+        setNavOpen(false);
+        toggle.focus();
+      }
+    });
+
+    toggle.parentElement.classList.add("has-nav-toggle");
   }
 
   /* 滚动后页头加重 */
@@ -29,18 +42,17 @@
   onScroll();
   window.addEventListener("scroll", onScroll, { passive: true });
 
+  /* 页脚年份 */
+  var yearEl = document.getElementById("year");
+  if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+
   /* 入场揭示 */
   var items = document.querySelectorAll(".reveal");
   if (!items.length) return;
 
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  if (reduce || !("IntersectionObserver" in window)) {
-    items.forEach(function (el) {
-      el.classList.add("is-in");
-    });
-    return;
-  }
+  if (reduce || !("IntersectionObserver" in window)) return;
 
   var io = new IntersectionObserver(
     function (entries) {
@@ -60,8 +72,4 @@
   items.forEach(function (el) {
     io.observe(el);
   });
-
-  /* 页脚年份 */
-  var yearEl = document.getElementById("year");
-  if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 })();
